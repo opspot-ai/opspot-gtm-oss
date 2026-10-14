@@ -1,0 +1,54 @@
+{
+  "name": "opspot-company-launch-engine",
+  "version": "1.0.5",
+  "private": true,
+  "type": "module",
+  "description": "Agent-native company runtime for evidence-backed launch, execution, and replanning",
+  "license": "MIT",
+  "packageManager": "pnpm@11.15.1",
+  "engines": {
+    "node": ">=24.0.0",
+    "pnpm": ">=11.15.1"
+  },
+  "scripts": {
+    "build": "pnpm schema:export && pnpm --filter @opspot/control build && tsc -p tsconfig.build.json",
+    "dev": "pnpm --parallel --filter @opspot/control --filter @opspot/worker dev",
+    "dev:control": "pnpm --filter @opspot/control dev",
+    "dev:worker": "pnpm --filter @opspot/worker dev",
+    "start": "pnpm --parallel --filter @opspot/control --filter @opspot/worker start",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint .",
+    "schema:export": "tsx scripts/export-schema.ts",
+    "setup": "tsx scripts/setup.ts",
+    "quickstart:check": "pnpm setup && pnpm engine:doctor",
+    "quickstart": "pnpm quickstart:check && pnpm build && tsx scripts/start-local.ts",
+    "doctor": "tsx scripts/doctor.ts",
+    "engine:doctor": "tsx scripts/doctor.ts",
+    "cli": "tsx apps/cli/src/index.ts",
+    "mcp": "tsx apps/mcp/src/index.ts",
+    "mcp:smoke": "tsx scripts/mcp-smoke.ts",
+    "worker": "tsx apps/worker/src/index.ts",
+    "backup": "tsx scripts/backup.ts",
+    "restore": "tsx scripts/restore.ts",
+    "cloud:backup": "tsx scripts/cloud-backup-restore.ts backup",
+    "cloud:restore": "tsx scripts/cloud-backup-restore.ts restore-verify",
+    "check:corruption": "tsx scripts/corruption-check.ts"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "yaml": "2.9.0",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "9.39.2",
+    "@types/node": "26.1.1",
+    "eslint": "9.39.2",
+    "next": "16.3.8",
+    "tsx": "4.23.1",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.57.0",
+    "vitest": "4.1.11"
+  }
+}

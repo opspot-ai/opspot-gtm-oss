@@ -1,0 +1,11 @@
+OpSpot GTM
+Copyright (c) 2026 OpSpot
+
+This source snapshot contains project source and metadata; it does not include
+installed third-party packages or compiled runtime artifacts. The pnpm lockfile
+records third-party package inputs; their license terms and notices apply when
+those packages are separately installed. A distribution that bundles
+dependencies or compiled output needs a current notice review.
+
+The optional Sharp image-processing dependency distributes libvips binaries
+under LGPL-3.0-or-later. Its license and source offer remain with that package.

@@ -1,0 +1,13 @@
+{
+  "name": "@opspot/mcp",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.32.1",
+    "@opspot/contracts": "workspace:*",
+    "@opspot/domain": "workspace:*",
+    "zod": "4.4.3"
+  },
+  "license": "MIT"
+}

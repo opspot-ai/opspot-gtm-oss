@@ -1,0 +1,11 @@
+packages:
+  - apps/*
+  - packages/*
+allowBuilds:
+  esbuild: true
+  sharp: true
+strictPeerDependencies: true
+overrides:
+  postcss: 8.5.23
+minimumReleaseAgeExclude:
+  - postcss@8.5.23

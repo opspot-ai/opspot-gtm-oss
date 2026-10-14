@@ -1,0 +1,17 @@
+{
+  "name": "@opspot/domain",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "exports": "./src/index.ts",
+  "dependencies": {
+    "@opspot/contracts": "workspace:*",
+    "@opspot/packs": "workspace:*",
+    "@opspot/policy": "workspace:*",
+    "@opspot/storage": "workspace:*",
+    "@opspot/dispatch": "workspace:*",
+    "@opspot/adapters": "workspace:*",
+    "zod": "4.4.3"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    "target": "ES2023",
+    "lib": ["ES2023", "DOM", "DOM.Iterable"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "jsx": "preserve",
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "declaration": true,
+    "sourceMap": true,
+    "baseUrl": ".",
+    "paths": {
+      "@opspot/contracts": ["packages/contracts/src/index.ts"],
+      "@opspot/packs": ["packages/packs/src/index.ts"],
+      "@opspot/policy": ["packages/policy/src/index.ts"],
+      "@opspot/storage": ["packages/storage/src/index.ts"],
+      "@opspot/dispatch": ["packages/dispatch/src/index.ts"],
+      "@opspot/adapters": ["packages/adapters/src/index.ts"],
+      "@opspot/domain": ["packages/domain/src/index.ts"]
+    },
+    "types": ["node"]
+  },
+  "include": ["apps/**/*.ts", "apps/**/*.tsx", "packages/**/*.ts", "scripts/**/*.ts", "tests/**/*.ts", "vitest.config.ts", "eslint.config.mjs"],
+  "exclude": ["node_modules", ".next", "dist", "data", "backups"]
+}

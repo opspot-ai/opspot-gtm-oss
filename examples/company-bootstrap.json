@@ -1,0 +1,17 @@
+{
+  "idea": "Help independent consultants test a fixed-scope client reporting service before they invest in a large product.",
+  "name": "Example Company (synthetic)",
+  "owner": "Example Founder",
+  "destination": "cash-flow",
+  "horizonDays": 30,
+  "budgetCents": 1000,
+  "constraints": [
+    "Use synthetic data and operator-owned test endpoints only."
+  ],
+  "killConditions": [
+    "Stop when the bounded budget is exhausted without authoritative demand evidence."
+  ],
+  "permissions": "Research and internal asset drafting are allowed. External sends, publication, credential changes, and money movement require exact approval.",
+  "requestedAt": "2026-07-20T00:00:00.000Z",
+  "idempotencyKey": "example-bootstrap-synthetic-v1"
+}
